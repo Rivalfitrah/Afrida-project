@@ -86,7 +86,7 @@
                 </div>
                 <nav>
                     <ul id="MenuItems">
-                        <li><a href="home.php">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><a href="about.php">Tentang</a></li>
                         <li><a class="active" href="navigasiproduk.php">Katalog Produk</a></li>
                         <li><a href="contact.php">Kontak dan Pemesanan</a></li>
@@ -174,7 +174,7 @@
                 <div class="footer-col-3">
                     <h3>Navigasi Web</h3>
                     <ul class="footer-links">
-                        <li><a href="home.php" class="footer-link">Home</a></li>
+                        <li><a href="index.php" class="footer-link">Home</a></li>
                         <li><a href="about.php" class="footer-link">Tentang</a></li>
                         <li><a href="products.php" class="footer-link">Katalog Produk</a></li>
                         <li><a href="contact.php" class="footer-link active">Kontak dan Pemesanan</a></li>

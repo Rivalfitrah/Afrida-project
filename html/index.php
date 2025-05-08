@@ -1,364 +1,207 @@
-<?php 
-require 'config/function.php';
-?>
-
 <!DOCTYPE html>
-<html
-  lang="en"
-  class="light-style layout-menu-fixed"
-  dir="ltr"
-  data-theme="theme-default"
-  data-assets-path="../assets/"
-  data-template="vertical-menu-template-free"
->
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
-    />
+<html lang="en">
 
-    <title>Dashboard Afrida Store</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Plastik Afrida</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 
-    <meta name="description" content="" />
+<body>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../assets/img/favicon/afrida.ico" />
+<div class="header">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Icons. Uncomment required icon fonts -->
-    <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
-
-    <!-- Core CSS -->
-    <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
-    <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
-    <link rel="stylesheet" href="../assets/css/demo.css" />
-
-    <!-- Vendors CSS -->
-    <link rel="stylesheet" href="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
-
-    <link rel="stylesheet" href="../assets/vendor/libs/apex-charts/apex-charts.css" />
-
-    <!-- Page CSS -->
-
-    <!-- Helpers -->
-    <script src="../assets/vendor/js/helpers.js"></script>
-
-    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
-    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-    <script src="../assets/js/config.js"></script>
-
-    <style>
-      .button-container {
-        display: flex;
-        justify-content: center;
-        margin-top: 10px;
-      }
-      .button-container button {
-        margin: 0 5px;
-      }
-    </style>
-  </head>
-
-  <body>
-    <!-- Layout wrapper -->
-    <div class="layout-wrapper layout-content-navbar">
-      <div class="layout-container">
-        <!-- Menu -->
-
-        <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
-          <div class="app-brand demo">
-            <a href="index.php" class="app-brand-link">
-              <span class="app-brand-logo demo">
-                <svg
-                  width="25"
-                  viewBox="0 0 25 42"
-                  version="1.1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                >
-                  <defs>
-                    <path
-                      d="M13.7918663,0.358365126 L3.39788168,7.44174259 C0.566865006,9.69408886 -0.379795268,12.4788597 0.557900856,15.7960551 C0.68998853,16.2305145 1.09562888,17.7872135 3.12357076,19.2293357 C3.8146334,19.7207684 5.32369333,20.3834223 7.65075054,21.2172976 L7.59773219,21.2525164 L2.63468769,24.5493413 C0.445452254,26.3002124 0.0884951797,28.5083815 1.56381646,31.1738486 C2.83770406,32.8170431 5.20850219,33.2640127 7.09180128,32.5391577 C8.347334,32.0559211 11.4559176,30.0011079 16.4175519,26.3747182 C18.0338572,24.4997857 18.6973423,22.4544883 18.4080071,20.2388261 C17.963753,17.5346866 16.1776345,15.5799961 13.0496516,14.3747546 L10.9194936,13.4715819 L18.6192054,7.984237 L13.7918663,0.358365126 Z"
-                      id="path-1"
-                    ></path>
-                    <path
-                      d="M5.47320593,6.00457225 C4.05321814,8.216144 4.36334763,10.0722806 6.40359441,11.5729822 C8.61520715,12.571656 10.0999176,13.2171421 10.8577257,13.5094407 L15.5088241,14.433041 L18.6192054,7.984237 C15.5364148,3.11535317 13.9273018,0.573395879 13.7918663,0.358365126 C13.5790555,0.511491653 10.8061687,2.3935607 5.47320593,6.00457225 Z"
-                      id="path-3"
-                    ></path>
-                    <path
-                      d="M7.50063644,21.2294429 L12.3234468,23.3159332 C14.1688022,24.7579751 14.397098,26.4880487 13.008334,28.506154 C11.6195701,30.5242593 10.3099883,31.790241 9.07958868,32.3040991 C5.78142938,33.4346997 4.13234973,34 4.13234973,34 C4.13234973,34 2.75489982,33.0538207 2.37032616e-14,31.1614621 C-0.55822714,27.8186216 -0.55822714,26.0572515 -4.05231404e-15,25.8773518 C0.83734071,25.6075023 2.77988457,22.8248993 3.3049379,22.52991 C3.65497346,22.3332504 5.05353963,21.8997614 7.50063644,21.2294429 Z"
-                      id="path-4"
-                    ></path>
-                    <path
-                      d="M20.6,7.13333333 L25.6,13.8 C26.2627417,14.6836556 26.0836556,15.9372583 25.2,16.6 C24.8538077,16.8596443 24.4327404,17 24,17 L14,17 C12.8954305,17 12,16.1045695 12,15 C12,14.5672596 12.1403557,14.1461923 12.4,13.8 L17.4,7.13333333 C18.0627417,6.24967773 19.3163444,6.07059163 20.2,6.73333333 C20.3516113,6.84704183 20.4862915,6.981722 20.6,7.13333333 Z"
-                      id="path-5"
-                    ></path>
-                  </defs>
-                  
-                </svg>
-              </span>
-              <!--IMG-->
-              <!--IMG-->
-              <!--IMG-->
-              <img src="../assets/img/favicon/afrida.png" alt="Logo" width="50" height="50" class="ms-2" />
-              <!--END IMG-->
-              <span class="app-brand-text demo menu-text fw-bolder ms-2">Afrida</span>
-            </a>
-
-            <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
-              <i class="bx bx-chevron-left bx-sm align-middle"></i>
-            </a>
-          </div>
-
-          <div class="menu-inner-shadow"></div>
-
-          <ul class="menu-inner py-1">
-            <!-- Dashboard -->
-            <li class="menu-item active">
-              <a href="index.php" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Beranda</div>
-              </a>
-            </li>
-
-            <li class="menu-header small text-uppercase">
-              <span class="menu-header-text">Products</span>
-            </li>
-            <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-dock-top"></i>
-                <div data-i18n="Account Settings">Katalog</div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="plastik.php" class="menu-link">
-                    <div data-i18n="Account">Plastik</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="kue.php" class="menu-link">
-                    <div data-i18n="Notifications">Bahan Kue</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="makanan.php" class="menu-link">
-                    <div data-i18n="Connections">Bahan Makanan</div>
-                  </a>
-                </li>
-              </ul>
-            </li>
-      
-            <!-- Components -->
-            <li class="menu-header small text-uppercase"><span class="menu-header-text">Keuangan</span></li>
-            <!-- Cards -->
-            <!-- User interface -->
-            <li class="menu-item">
-              <a href="javascript:void(0)" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-box"></i>
-                <div data-i18n="User interface">Keuangan</div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="masuk.php" class="menu-link">
-                    <div data-i18n="Accordion">Pemasukkan</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="keluar.php" class="menu-link">
-                    <div data-i18n="Alerts">Pengeluaran</div>
-                  </a>
-                </li>
-        </aside>
-        <!-- / Menu -->
-
-        <!-- Layout container -->
-        <div class="layout-page">
-          <!-- Navbar -->
-
-          <nav
-            class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
-            id="layout-navbar"
-          >
-            <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
-              <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
-                <i class="bx bx-menu bx-sm"></i>
-              </a>
+    <div class="containeratas">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/baruafrida.png" width="350px" alt="toko_plastik">
             </div>
 
-            <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-              <!-- Search -->
+            <nav>
+                <ul id="MenuItems">
+                    <li><a class="active" href="index.php">Home</a></li>
+                    <li><a href="about.php">Tentang</a></li>
+                    <li><a href="navigasiproduk.php">Katalog Produk</a></li>
+                    <li><a href="contact.php">Kontak dan Pemesanan</a></li>
+                </ul>
 
-              <!-- /Search -->
-
-              <ul class="navbar-nav flex-row align-items-center ms-auto">
-                <!-- Place this tag where you want the button to render. -->
-                <li class="nav-item lh-1 me-3">
-
-                <!-- User -->
-                <li class="nav-item navbar-dropdown dropdown-user dropdown">
-                  <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
-                    <div class="avatar avatar-online">
-                      <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
-                    </div>
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-end">
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        <div class="d-flex">
-                          <div class="flex-shrink-0 me-3">
-                            <div class="avatar avatar-online">
-                              <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
-                            </div>
-                          </div>
-                          <div class="flex-grow-1">
-                            <span class="fw-semibold d-block">username</span>
-                            <small class="text-muted">Admin</small>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                    <li>
-                      <div class="dropdown-divider"></div>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="login.php">
-                        <i class="bx bx-power-off me-2"></i>
-                        <span class="align-middle">Log Out</span>
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <!--/ User -->
-              </ul>
-            </div>
-          </nav>
-
-          <!-- Content wrapper -->
-          <div class="content-wrapper">
-            <!-- Content -->
-
-            <div class="container-xxl flex-grow-1 container-p-y">
-              <div class="row">
-                  <div class="col-lg-12 mb-4 order-0">
-                      <div class="card">
-                          <div class="d-flex align-items-end row">
-                              <div class="col-sm-5 text-center text-sm-left">
-                                  <div class="card-body pb-0 px-0 px-md-4">
-                                      <img src="../assets/img/illustrations/oran.png" height="200" alt="View Badge User"
-                                          data-app-dark-img="illustrations/oran.png" data-app-light-img="illustrations/oran.png" />
-                                  </div>
-                              </div>
-                              <div class="col-sm-7">
-                                  <div class="card-body">
-                                      <h5 class="card-title text-primary">Selamat Datang Admin! 👋</h5>
-                                      <p class="mb-4">
-                                          Pantau dan kelola stok penjualan toko plastik dan bahan kue dengan mudah. Di sini,
-                                          mengontrol inventaris, memantau penjualan, dan memastikan ketersediaan produk selalu
-                                          terjaga. Jadikan manajemen toko lebih efisien dan efektif!
-                                      </p>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-
-          <!-- / Navbar -->
-
-          <!-- Content wrapper -->
-          <div class="content-wrapper">
-            <!-- Content -->
-
-            <div class="container-xxl flex-grow-1 container-p-y">
-              <div class="row">
-                  <div class="col-lg-12 mb-4 order-0">
-                      <div class="card">
-                          <div class="d-flex align-items-end row">
-                              <div class="col-sm-5 text-center text-sm-left">
-                                  <div class="card-body pb-0 px-0 px-md-4">
-                                      <img src="../assets/img/illustrations/afrida1.jpg" height="200" alt="View Badge User"
-                                          data-app-dark-img="illustrations/afrida1.jpg" data-app-light-img="illustrations/afrida1.jpg" />
-                                  </div>
-                              </div>
-                              <div class="col-sm-7">
-                                  <div class="card-body">
-                                      <h5 class="card-title text-primary">Toko Plastik dan Bahan Kue Afrida</h5>
-                                      <p class="mb-4">
-                                        Afrida Plastik merupakan UKM (Usaha Kecil dan Menengah) yang bergerak dalam bidang distribusi barang-barang konsumen. Usaha ini menjual berbagai macam jenis dan ukuran plastik, bahan kue, serta kebutuhan semacamnya. Toko Afrida Plastik berlokasi di Jalan Raya Laladon, Kecamatan Ciomas, Kabupaten Bogor. Sudah berdiri selama lima tahun namun sampai saat ini dalam pencatatan stock product masih dilakukan secara manual dengan kertas, selain itu usaha ini belum melakukan penjualan secara online.
-                                      </p>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-                </div>
-                </div>
-            </div>
+            </nav>
+            <img src="images/menu.png" alt="" class="menu-icon" onclick="menutoggle()" >
         </div>
-              
-                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-              </body>
-              
-              <footer class="content-footer footer bg-footer-theme">
-                <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
-                  <div class="mb-2 mb-md-0 order-md-2"> <!-- Menggunakan order-md-2 untuk mengubah urutan tampilan di tata letak desktop -->
-                    &copy;
-                    <script>
-                      document.write(new Date().getFullYear());
-                    </script>
-                  </div>
-                  <div class="order-md-1 mb-2 mb-md-0"> <!-- Menggunakan order-md-1 untuk mengubah urutan tampilan di tata letak desktop -->
-                    <span>, made by</span>
-                  </div>
-                </div>
-              </footer>
 
-            <div class="content-backdrop fade"></div>
-          </div>
-          <!-- Content wrapper -->
+        <div class="row">
+            <div class="col-2">
+                <h1>Toko Afrida Plastik</h1>
+                <p>Temukan berbagai macam jenis plastik, bahan kue, dan kebutuhan semacamnya untuk memenuhi kebutuhan Anda. Kunjungi website kami dan lakukan pemesanan dengan satu kali klik.</p>
+                <a href="navigasiproduk.php" class="btn" target="_blank">Lihat Semua Produk!</a>
+            </div>
+
+            <div class="col-2">
+                <img src="images/newafrida.png" width="70%" alt="" class="logoafrida">
+            </div>
+
         </div>
-        <!-- / Layout page -->
-      </div>
 
-      <!-- Overlay -->
-      <div class="layout-overlay layout-menu-toggle"></div>
     </div>
-    <!-- / Layout wrapper -->
+    
+</div>
 
-    <!-- Core JS -->
-    <!-- build:js assets/vendor/js/core.js -->
-    <script src="../assets/vendor/libs/jquery/jquery.js"></script>
-    <script src="../assets/vendor/libs/popper/popper.js"></script>
-    <script src="../assets/vendor/js/bootstrap.js"></script>
-    <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
 
-    <script src="../assets/vendor/js/menu.js"></script>
-    <!-- endbuild -->
+<!-------- WhatsApp Logo --------->
+<a href="https://wa.me/+6289605763781" class="whatsapp-float" target="_blank" rel="noopener" >
+    <i class="fa fa-whatsapp" style="font-size:40px"></i>
+</a>
+    
 
-    <!-- Vendors JS -->
-    <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
+<!------- featured products ---------->
+    <div class="small-container">
+        <h2 class="title">Produk Terlaris</h2>
+        <div class="row">
+            <div class="col-4">
+                <img src="images/plastik_pe_10x25.png" alt="">
+                <h4>Plastik PE 10x25</h4>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <p>9000</p>
+            </div>
+            <div class="col-4">
+                <img src="images/segitiga_biru_box.png" alt="">
+                <h4>Terigu Segitiga Biru</h4>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <p>9000</p>
+            </div>
+            <div class="col-4">
+                <img src="images/mika4x_box.png" alt="">
+                <h4>Mika 4x</h4>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <p>9000</p>
+            </div>
+        </div>
+    </div>
 
-    <!-- Main JS -->
-    <script src="../assets/js/main.js"></script>
+<!---- offer ----->
+    <div class="offer">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/Mayonnaise mc Lewis.png" alt="" class="offer-img">
+                </div>
+                <div class="col-2">
+                    <p>Tersedia di Toko Afrida Plastik</p>
+                    <h1>Mayonaise Lewis</h1>
+                    <small>McLewis Saus Mayo cocok untuk berbagai hidangan, seperti burger, sandwich, salad, dan kentang goreng. Saus ini juga dapat digunakan sebagai bahan dasar untuk membuat berbagai saus dan dressing lainnya. Yuk lakukan pemesanan sekarang juga!<br></small>
+                    <a href="https://wa.me/6289605763781" class="btn" target="_blank" rel="noopener">Belanja Sekarang!</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <!-- Page JS -->
-    <script src="../assets/js/dashboards-analytics.js"></script>
+<!-------- testimonial --------->
+    <div class="testimonial">
+        <div class="small-container">
+            <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+            <div class="elfsight-app-b8acb0b4-18e3-4c84-b7c2-12cb0c2db536" data-elfsight-app-lazy></div>
+        </div>
+    </div>
 
-    <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <script src="../assets/js/stock.js"></script>
-  </body>
+    
+<!-------- brands ------->
+    <div class="brands">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-5">
+                    <img src="images/wincheeze.png" alt="palmia">
+                </div>
+                <div class="col-5">
+                    <img src="images/nutrijell puding.png" alt="palmia">
+                </div>
+                <div class="col-5">
+                    <img src="images/palmialogo.png" alt="palmia">
+                </div>
+                <div class="col-5">
+                    <img src="images/bogasari.png" alt="palmia">
+                </div>
+                <div class="col-5">
+                    <img src="images/diamond.jpg" alt="palmia">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+<!-------- footer ---------->
+    <div class="footer">
+        <div class="containerbawah">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Lokasi Toko Afrida Plastik</h3>
+                    <p>Klik Google Maps untuk Detailnya!</p>
+                    <div class="app-logo">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.4791013610234!2d106.7589689!3d-6.587213299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c52303ec2453%3A0xbe3717ddaef5ab6e!2sAfrida%20Plastik!5e0!3m2!1sid!2sid!4v1717212753035!5m2!1sid!2sid" width="372" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Navigasi Web</h3>
+                    <ul class="footer-links">
+                        <li><a href="home.php" class="footer-link active">Home</a></li>
+                        <li><a href="about.php" class="footer-link">Tentang</a></li>
+                        <li><a href="products.php" class="footer-link">Katalog Produk</a></li>
+                        <li><a href="contact.php" class="footer-link">Kontak dan Pemesanan</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Hubungi Kami</h3>
+                    <ul>
+                        <li>
+                            <a href="https://wa.me/6289605763781" target="_blank" class="whatsapp-link" rel="noopener">WhatsApp (+6289605763781)</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="alamat">Jalan Laladon Indah RT 04/06, Kecamatan Ciomas, Kabupaten Bogor, Jawa Barat, 16610</p>
+            <p class="copyright">©Copyright 2024 - Toko Afrida Plastik</p>
+        </div>
+    </div>
+
+
+    <!----------js for toggle menu------------->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px")
+                {
+                    MenuItems.style.maxHeight = "200px"
+                }
+            else
+                {
+                    MenuItems.style.maxHeight = "0px"
+                }
+        }
+    </script>
+
+</body>
 </html>

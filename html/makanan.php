@@ -87,7 +87,7 @@ require 'config/bahan_makanan.php';
     <div class="layout-container">
       <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
         <div class="app-brand demo">
-          <a href="index.php" class="app-brand-link">
+          <a href="dashboard.php" class="app-brand-link">
             <span class="app-brand-logo demo">
               <svg width="25" viewBox="0 0 25 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <defs>
@@ -108,7 +108,7 @@ require 'config/bahan_makanan.php';
         <div class="menu-inner-shadow"></div>
         <ul class="menu-inner py-1">
           <li class="menu-item active">
-            <a href="index.php" class="menu-link">
+            <a href="dashboard.php" class="menu-link">
               <i class="menu-icon tf-icons bx bx-home-circle"></i>
               <div data-i18n="Analytics">Beranda</div>
             </a>

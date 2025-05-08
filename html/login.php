@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
   if($hitung > 0){
     $_SESSION['log'] = 'true';
-    header('Location: index.php');
+    header('Location: dashboard.php');
     exit();
   } else {
     $_SESSION['error'] = 'Username atau password salah';
@@ -85,7 +85,7 @@ mysqli_close($conn);
             <div class="card-body">
               <!-- Logo -->
               <div class="app-brand justify-content-center">
-                <a href="index.php" class="app-brand-link gap-2">
+                <a href="dashboard.php" class="app-brand-link gap-2">
                   <span class="app-brand-logo demo">
                     <!-- Tambahkan logo di sini -->
                     <img src="../assets/img/favicon/afrida.png" alt="Logo" width="50" height="50" />
